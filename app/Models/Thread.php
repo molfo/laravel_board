@@ -12,4 +12,9 @@ class Thread extends Model
     protected $fillable = [
         'title'
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

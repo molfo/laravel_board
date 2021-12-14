@@ -44,7 +44,11 @@ class User extends Authenticatable
 
     public function threads()
     {
-        retrurn $this->hasMany(thread::class);
+        return $this->hasMany(thread::class);
     }
-    
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
